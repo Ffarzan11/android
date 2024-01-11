@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TipCalculatorActivity">
+
+
+    <TextView
+        android:id="@+id/checkAmount"
+        android:layout_width="126dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="52dp"
+        android:text="Check amount:"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/partySize"
+        android:layout_width="126dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="25dp"
+        android:text="Party size:"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@id/checkAmount"
+        app:layout_constraintStart_toStartOf="@+id/checkAmount"
+        app:layout_constraintTop_toBottomOf="@+id/checkAmount" />
+
+    <TextView
+        android:id="@+id/fifteenPercentTip"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="268dp"
+        android:text="Tip: 15%"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/checkAmount"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/checkAmount"
+        app:layout_constraintTop_toBottomOf="@+id/checkAmount" />
+
+    <TextView
+        android:id="@+id/twentyPercentTip"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="268dp"
+        android:text=" 20%"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/fifteenPercentTip"
+        app:layout_constraintTop_toBottomOf="@+id/checkAmount" />
+
+    <TextView
+        android:id="@+id/twentyfivePercentTip"
+        android:layout_width="32dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="268dp"
+        android:layout_marginEnd="10dp"
+        android:text=" 25% "
+        android:textColor="@android:color/darker_gray"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/twentyfivePercentTipValue"
+        app:layout_constraintStart_toEndOf="@+id/fifteenPercentTip"
+        app:layout_constraintTop_toBottomOf="@+id/checkAmount" />
+
+    <TextView
+        android:id="@+id/fifteenPercentTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="350dp"
+        android:text="Total: 15%"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/fifteenPercentTip"
+        app:layout_constraintTop_toBottomOf="@+id/checkAmount" />
+
+    <TextView
+        android:id="@+id/twentyPercentTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="350dp"
+        android:text=" 20%"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/twentyPercentTip"
+        app:layout_constraintStart_toEndOf="@+id/fifteenPercentTotal"
+        app:layout_constraintTop_toBottomOf="@+id/checkAmount"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/twentyfivePercentTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="190dp"
+        android:layout_marginTop="350dp"
+        android:text=" 25% "
+        android:textColor="@android:color/darker_gray"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/twentyfivePercentTip"
+        app:layout_constraintStart_toEndOf="@+id/fifteenPercentTotal"
+        app:layout_constraintTop_toBottomOf="@+id/checkAmount"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/buttonCompute"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="110dp"
+        android:text="COMPUTE TIP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkAmount" />
+
+    <EditText
+        android:id="@+id/checkAmountValue"
+        android:layout_width="0dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:hint="e.g. 30"
+        android:inputType="numberDecimal"
+        android:labelFor="@id/checkAmountValue"
+        android:textCursorDrawable="@android:color/holo_red_dark"
+        app:layout_constraintBaseline_toBaselineOf="@id/checkAmount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/checkAmount" />
+
+    <EditText
+        android:id="@+id/partySizeValue"
+        android:layout_width="0dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="32dp"
+        android:ems="10"
+        android:hint="e.g. 4"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textCursorDrawable="@android:color/holo_red_dark"
+        app:layout_constraintBaseline_toBaselineOf="@id/partySize"
+        app:layout_constraintBottom_toBottomOf="@id/partySize"
+        app:layout_constraintEnd_toEndOf="@+id/checkAmountValue"
+        app:layout_constraintStart_toEndOf="@+id/partySize"
+        app:layout_constraintTop_toTopOf="@id/partySize"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/fifteenPercentTipValue"
+        android:layout_width="56dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="5dp"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="none"
+        android:labelFor="@id/fifteenPercentTipValue"
+        android:minHeight="48dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/fifteenPercentTip"
+        app:layout_constraintBottom_toBottomOf="@id/fifteenPercentTip"
+        app:layout_constraintEnd_toStartOf="@+id/twentyPercentTip"
+        app:layout_constraintStart_toEndOf="@+id/fifteenPercentTip"
+        app:layout_constraintTop_toTopOf="@id/fifteenPercentTip"
+        app:layout_constraintVertical_bias="0.517" />
+
+    <EditText
+        android:id="@+id/twentyPercentTipValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginEnd="10dp"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="none"
+        android:labelFor="@id/twentyPercentTipValue"
+        android:minHeight="48dp"
+        android:textColor="@color/black"
+        app:hintEnabled="false"
+        app:layout_constraintBaseline_toBaselineOf="@id/twentyPercentTip"
+        app:layout_constraintBottom_toBottomOf="@id/twentyPercentTip"
+        app:layout_constraintEnd_toStartOf="@+id/twentyfivePercentTip"
+        app:layout_constraintStart_toEndOf="@+id/fifteenPercentTip"
+        app:layout_constraintTop_toTopOf="@id/twentyPercentTip"
+        app:layout_constraintVertical_bias="0.517" />
+
+    <EditText
+        android:id="@+id/twentyfivePercentTipValue"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="240dp"
+        android:ems="10"
+        android:enabled="false"
+        android:hint=" "
+        android:inputType="none"
+        android:labelFor="@id/twentyfivePercentTipValue"
+        android:minHeight="48dp"
+        android:textColor="@color/black"
+        app:layout_constraintBaseline_toBaselineOf="@id/twentyfivePercentTip"
+        app:layout_constraintBottom_toBottomOf="@id/twentyfivePercentTip"
+        app:layout_constraintEnd_toEndOf="@+id/checkAmountValue"
+        app:layout_constraintStart_toEndOf="@+id/fifteenPercentTip" />
+
+    <EditText
+        android:id="@+id/fifteenPercentTotalValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="none"
+        android:labelFor="@id/fifteenPercentTotalValue"
+        android:minHeight="48dp"
+        android:textColor="@color/black"
+        app:layout_constraintBaseline_toBaselineOf="@id/fifteenPercentTotal"
+        app:layout_constraintBottom_toBottomOf="@id/fifteenPercentTotal"
+        app:layout_constraintEnd_toEndOf="@+id/fifteenPercentTipValue"
+        app:layout_constraintStart_toEndOf="@+id/fifteenPercentTotal"
+        app:layout_constraintTop_toTopOf="@id/fifteenPercentTotal"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/twentyPercentTotalValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="110dp"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="none"
+        android:labelFor="@id/twentyPercentTotalValue"
+        android:minHeight="48dp"
+        android:textColor="@color/black"
+        app:layout_constraintBaseline_toBaselineOf="@id/twentyPercentTotal"
+        app:layout_constraintBottom_toBottomOf="@id/twentyPercentTotal"
+        app:layout_constraintEnd_toEndOf="@+id/twentyPercentTipValue"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toEndOf="@+id/fifteenPercentTotal"
+        app:layout_constraintTop_toTopOf="@id/twentyPercentTotal"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/twentyfivePercentTotalValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="230dp"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="none"
+        android:labelFor="@id/twentyfivePercentTotalValue"
+        android:minHeight="48dp"
+        android:textColor="#020202"
+        app:layout_constraintBaseline_toBaselineOf="@id/twentyfivePercentTotal"
+        app:layout_constraintBottom_toBottomOf="@id/twentyfivePercentTotal"
+        app:layout_constraintEnd_toEndOf="@+id/checkAmountValue"
+        app:layout_constraintHorizontal_bias="0.843"
+        app:layout_constraintStart_toEndOf="@+id/fifteenPercentTotal"
+        app:layout_constraintTop_toTopOf="@id/twentyfivePercentTotal"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tipsAndTotals"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="240dp"
+        android:layout_marginEnd="110dp"
+        android:text="Tips and Totals (Per Person)"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/checkAmount" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
